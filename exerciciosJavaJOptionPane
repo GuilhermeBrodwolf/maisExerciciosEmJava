@@ -1,0 +1,104 @@
+package javaaula06_09;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author guilherme_nones
+ */
+public class JavaAula06_09 {
+
+    public static void main(String[] args) {
+
+        /*
+        String nome = JOptionPane.showInputDialog("Informe seu nome: ");
+        
+        JOptionPane.showMessageDialog(null, "Olá, seja bem vindo, " + nome);
+        
+        
+        
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("informe sua idade: "));
+        
+        JOptionPane.showMessageDialog(null, "Sua idade é: " + idade);
+        
+        
+        
+        float peso = Float.parseFloat(JOptionPane.showInputDialog("Informe seu peso: "));
+        
+        JOptionPane.showMessageDialog(null, "O seu peso é: " + peso);
+        
+        
+        
+        double salario = Double.parseDouble(JOptionPane.showInputDialog("Informe seu salário: "));
+        
+        JOptionPane.showMessageDialog(null,"seu salário é: R$" + salario);
+        
+        
+        JOptionPane.showMessageDialog(null, "Seu nome é: " + nome + ""
+            + "\nSua idade é: " + idade + ""
+            + "\nseu peso é: " + peso + ""
+            + "\nseu salário é: " + salario);
+                      
+        
+        
+         1 - Desenvolva um algoritmo que solicite a idade do usuário.
+         Verifique se o usuário é menor de idade (idade < 18), maior de idade (idade >= 18 e idade < 65) ou idoso (idade >= 65). imprimir em tela em que grupo o usuário se enquadra.
+         
+        
+        int idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual é sua idade?"));
+        
+        if(idade < 18){
+            JOptionPane.showMessageDialog(null, "Menor de idade," + idade + "anos");
+        }else if(idade >=18 && idade < 65){
+            JOptionPane.showConfirmDialog(null, "Maior de idade " + idade+ " anos");
+        }else{
+            JOptionPane.showMessageDialog(null, "Idoso, " + idade + " anos");
+        }
+        */
+        
+        /*
+         2 - Escreva um algoritmo que calcule o IMC (Índice de Massa Corporal) de uma pessoa e mostre se em qual faixa da tabela abaixo ela se enquadra. 
+         Informar o peso e a altura da pessoa, calcular o IMC e mostrar em qual grupo se enquadra. Fórmula do IMC = peso / altura²
+        */
+        
+        float peso = Float.parseFloat(JOptionPane.showInputDialog(null, "Qual é o seu peso?"));
+        float altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Qual é sua altura?"));
+        float imc = peso / (altura * altura);
+        
+        JOptionPane.showMessageDialog(null, "seu imc é: " + imc);
+        
+        if(imc <= 18.5f){
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Abaixo do peso normal");
+        }else if(imc >= 18.5 && imc <= 24.9){
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Peso normal");
+        }else if(imc >= 25.0 && imc <= 29.9){
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Excesso de peso");
+        }else if(imc >= 30.0 && imc <= 34.9){
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Obesidade classe I");
+        }else if(imc >= 35.00 && imc <= 39.9){
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Obesidade classe II");
+        }else{
+            JOptionPane.showMessageDialog(null, "Classificação: " + imc + " Obesidade classe III");
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
